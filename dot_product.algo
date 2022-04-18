@@ -15,6 +15,7 @@ ALGORITHM IsOrthogonal
 VAR
     i,j,n : INTEGER
     v1,v2 : ARRAY_OF FLOAT[3] ;
+    ps:FLOAT:=0
 BEGIN
 // Read the n pairs of vectors
     
@@ -27,7 +28,8 @@ FOR i FROM 1 TO n STEP 1  DO
     Read(v2)
 
 //Check if the given two vectors are orthogonal or not 
-    IF (dot_product_p(v1, v2, ps)= 0)
+    dot_product_p(v1, v2, ps)
+    IF (ps= 0)
         Write(v1 + " and "v2 + " are orthogonal")
     ELSE
         Write("this pair of vectors aren't orthogonal")
