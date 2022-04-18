@@ -18,7 +18,7 @@ VAR
 BEGIN
 // Read the n pairs of vectors
     
-    white("give the n pairs vectors: ")
+    Write("give the n pairs vectors: ")
     Read(n)
 
 // Read v1 and v2
@@ -58,7 +58,7 @@ VAR
 BEGIN
 // Read the n pairs of vectors
     
-    white("give the n pairs vectors: ")
+    Write("give the n pairs vectors: ")
     Read(n)
 
 // Read v1 and v2
