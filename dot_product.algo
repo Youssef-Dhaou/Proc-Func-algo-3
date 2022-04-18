@@ -1,10 +1,11 @@
-PROCEDURE dot_product_p (V1:ARRAY_OF FLOAT, v2:ARRAY_OF FLOAT, VAR ps: FLOAT)
+////////****** dot product procedure *******//////////////////////////////////////////////////////////////////
+PROCEDURE dot_product_p (v1:ARRAY_OF FLOAT, v2:ARRAY_OF FLOAT, VAR ps: FLOAT)
 VAR
     ps:=0
     i: INTEGER
 BEGIN
     FOR i FROM 0 TO v1.length-1 STEP 1 DO
-    ps := ps + V1[i]*v2[i]
+    ps := ps + v1[i]*v2[i]
     END_FOR
 END
 
@@ -13,7 +14,7 @@ END
 ALGORITHM IsOrthogonal
 VAR
     i,j,n : INTEGER
-    v1,v2 : ARRAY_OF FLOAT [3] ;
+    v1,v2 : ARRAY_OF FLOAT[3] ;
 BEGIN
 // Read the n pairs of vectors
     
@@ -34,14 +35,14 @@ FOR i FROM 1 TO n STEP 1  DO
     END_FOR
 END
 
-////////****** dot product function *******//////////
+////////****** dot product function *******//////////////////////////////////////////////////////////////////
 FUNCTION dot_product_f(v1: ARRAY_OF FLOAT, v2; ARRAY_OF FLOAT, ps:INTEGER) : FLOAT
 VAR
     ps: FLOAT :=0
     i: INTEGER
 BEGIN
     FOR i FROM 0 TO v1.length-1 STEP 1 DO
-    ps = ps + V1[i]*v2[i]
+    ps = ps + v1[i]*v2[i]
     END_FOR
 
     RETURN ps;
@@ -52,7 +53,7 @@ ALGORITHM IsOrthogonal
 VAR
 
     i,j,n : INTEGER
-    v1,v2 : ARRAY_OF FLOAT [3] ;
+    v1,v2 : ARRAY_OF FLOAT[3] ;
     ps: FLOAT:= 0
 BEGIN
 // Read the n pairs of vectors
